@@ -8,7 +8,7 @@ const Button = ({className ,href, onClick , children , px, white}) => {
     const spanClasses = "relative z-10";
 
     const renderButton =() =>(
-    <button className={classes}>
+    <button className={classes} onClick = {onClick}>
         <span>{children}</span>
         {ButtonSvg(white)}
     </button>
@@ -23,4 +23,4 @@ const Button = ({className ,href, onClick , children , px, white}) => {
   return href ? renderLink() : renderButton();
 };
 
-export default Buttonf
+export default Button
